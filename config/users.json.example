@@ -1,0 +1,9 @@
+{
+  "users": {
+    "admin": {
+      "hash": "PLAINTEXT:changeme",
+      "role": "admin"
+    }
+  },
+  "updated": "2025-11-13T09:17:14.647882Z"
+}
